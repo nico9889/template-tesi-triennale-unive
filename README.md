@@ -1,4 +1,4 @@
-# Template tesi triennale
+# Template tesi triennale Unive
 Questo repository doveva inizialmente contenere il sorgente LaTeX della mia tesi triennale.
 
 Per pignoleria mi sono ritrovato a perdere svariate ore a tentare di riprodurre il frontespizio predisposto dall'[Università](https://www.unive.it/pag/8751/#c41502), basandomi sul template in questo repository https://github.com/veneres/unive-ms-thesis-template/.
