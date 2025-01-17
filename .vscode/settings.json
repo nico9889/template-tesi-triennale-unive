@@ -4,7 +4,7 @@
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.docker.enabled": true,
     "latex-workshop.docker.image.latex": "ghcr.io/xu-cheng/texlive-full", // per compatibilità con ARM commenta questa riga e togli il commento da quella successiva
-    //"latex-workshop.docker.image.latex": "mfisherman/texlive-full" // Per compatibilità con ARM
+    //"latex-workshop.docker.image.latex": "mfisherman/texlive-full", // Per compatibilità con ARM
     "latex-workshop.view.pdf.invert": 0,
     "latex-workshop.view.pdf.invertMode.enabled": "compat",
     "cSpell.language": "it-IT,en-US",
