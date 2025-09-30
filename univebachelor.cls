@@ -109,6 +109,10 @@ title=Examp.~\thetcbcounter: #2,#1}
 \caption{\label{#2} #3} \end{figure*}}
 
 \setlength\parindent{0pt} % No indent
+\setlength{\parskip}{18pt} % Line spacing between paragraphs
+
+\setcounter{secnumdepth}{4}
+
 
 
 \newcommand{\image}[3]{ % 1 image 2 caption 3 size
