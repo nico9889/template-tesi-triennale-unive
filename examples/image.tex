@@ -1,0 +1,19 @@
+\chapter{Immagini}
+Scrivendo la tesi e inserendo immagini ti accorgerai che LaTeX tendenzialmente le mette nel primo posto libero che capita, spostandole anche a kilometri di distanza rispetto a dove sarebbero contestualmente utili.
+
+Nel file .cls è definita una (non brillantemente scritta) macro utile a far si che le immagini rimangano al loro posto, sacrificando piuttosto il posizionamento del testo:
+
+\imageLabel
+{img/logo.pdf}
+{Esempio di posizionamento immagine}
+{0.5}
+{immagine-di-esempio}
+
+La macro è così composta:
+\begin{itemize}
+    \item \textbf{\textbackslash imageLabel} invoca la macro 
+    \item \textbf{{img/logo.pdf}} è il percorso del file immagine (o PDF)
+    \item \textbf{{Esempio di posizionamento immagine}} è la didascalia dell'immagine 
+    \item \textbf{{0.5}} è la scala dell'immagine, in questo caso specifico viene ridotta la dimensione a metà
+    \item \textbf{{immagine-di-esempio}} è il tag dell'immagine, molto importante per fare riferimenti all'immagine (vedi Figura \ref{fig:immagine-di-esempio}).
+\end{itemize}

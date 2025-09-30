@@ -1,0 +1,22 @@
+\chapter{Code Block}
+
+Per creare blocchi di codice esteticamente molto fighi ma decisamente poco funzionali (copia-incollarli è tragico, provare per credere) puoi usare la macro definita nel .cls 
+
+\begin{codeblock}{cpp}{main.cpp}
+#include <iostream>
+use namespace std;
+
+int main{
+    cout << "Hello world! \n";
+    return 0;
+}
+\end{codeblock}
+
+dove:
+\begin{itemize}
+    \item \textbf{\textbackslash begin\{codeblock\}} "invoca" la macro
+    \item \textbf{\{cpp\}} è il primo argomento della macro e indica il linguaggio da usare per l'highlight
+    \item \textbf{\{main.cpp\}} è il titolo del box
+\end{itemize}
+
+mentre tutto ciò che è contenuto all'interno viene considerato come codice.
