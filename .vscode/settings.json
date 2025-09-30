@@ -3,6 +3,8 @@
     "latex-workshop.latex.outDir": "./out",
     "latex-workshop.view.pdf.viewer": "tab",
     "latex-workshop.docker.enabled": true,
+    // "latex-workshop.docker.path": "/usr/bin/podman", // Decommenta per usare con Podman invece che Docker
+    // Attenzione: su sistemi che fanno uso di SELinux non funziona un granché bene perché SELinux impedisce al container di accedere alla cartella che LaTeX-WorkShop monta al volo.
     "latex-workshop.docker.image.latex": "ghcr.io/xu-cheng/texlive-full", // per compatibilità con ARM commenta questa riga e togli il commento da quella successiva
     //"latex-workshop.docker.image.latex": "ghcr.io/xu-cheng/texlive-full", // Per compatibilità con ARM
     "latex-workshop.view.pdf.invert": 0,
