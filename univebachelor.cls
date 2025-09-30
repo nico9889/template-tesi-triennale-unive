@@ -46,9 +46,41 @@ footskip=.35in]{geometry}
 
 \RequirePackage{rotating}
 
+\RequirePackage{tcolorbox}
+
 \RequirePackage{tikz}
 
 \RequirePackage{url}
+
+
+% tcolorbox settings
+\tcbuselibrary{minted}
+\tcbuselibrary{skins}
+\tcbset{listing engine=minted}
+
+
+% template per code block
+\newtcolorbox[auto counter,number within=section]{pabox}[2][]{%
+colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,
+title=Examp.~\thetcbcounter: #2,#1}
+
+
+\newtcblisting{codeblock}[3][]{%
+	listing engine=minted,
+	minted style=colorful,
+	minted language=#2,
+	minted options={fontsize=\small,breaklines,autogobble,linenos,numbersep=3mm},
+	colback=gray!5,colframe=gray!50!black,listing only,
+	left=5mm,enhanced,
+	title={#3},
+	overlay={
+		\begin{tcbclipinterior}
+			\fill[gray!5] (frame.south west)
+			rectangle ([xshift=5mm]frame.north west);
+		\end{tcbclipinterior}
+		},#1
+}
+
 
 
 \hyphenation{a-gen-tiz-za-zio-ne}
