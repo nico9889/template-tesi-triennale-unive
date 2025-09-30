@@ -69,7 +69,7 @@ title=Examp.~\thetcbcounter: #2,#1}
 	listing engine=minted,
 	minted style=colorful,
 	minted language=#2,
-	minted options={fontsize=\small,breaklines,autogobble,linenos,numbersep=3mm},
+	minted options={fontsize=\small,breaklines,breakafter=.+ ,autogobble,linenos,numbersep=3mm},
 	colback=gray!5,colframe=gray!50!black,listing only,
 	left=5mm,enhanced,
 	title={#3},
