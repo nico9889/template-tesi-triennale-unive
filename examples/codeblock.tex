@@ -20,3 +20,18 @@ dove:
 \end{itemize}
 
 mentre tutto ciò che è contenuto all'interno viene considerato come codice.
+
+Nel caso il codice fosse talmente lungo da uscire dalla pagina è possibile usare \textbf{[breakable=true]} nel seguente modo
+
+\begin{codeblock}[breakable=true]{latex}{Come dividere un codice molto lungo}
+    \begin{codeblock}[breakable=true]{cpp}{Codice C++}
+        int main{
+            cout << "Hello world! \n";
+            return 0;
+        }
+    \end{codeblocK} % Attenzione al typo! Falliva il parsing riutilizzando "codeblock" perché chiude il blocco anticipatamente
+\end{codeblock}
+
+e ottenere quindi il seguente (moderatamente orrendo, ma c'è poco da fare) effetto.
+
+Nella maggior parte dei casi questo aiuta LaTeX a impaginare in modo migliore il testo, in quanto gli è più facile spostare e incastrare i blocchi di codice dove prima non ci stavano, al costo però della leggibilità del codice.

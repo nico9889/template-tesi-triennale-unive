@@ -46,7 +46,7 @@ footskip=.35in]{geometry}
 
 \RequirePackage{rotating}
 
-\RequirePackage{tcolorbox}
+\RequirePackage[skins,breakable]{tcolorbox}
 
 \RequirePackage{tikz}
 
@@ -67,9 +67,17 @@ title=Examp.~\thetcbcounter: #2,#1}
 
 \newtcblisting{codeblock}[3][]{%
 	listing engine=minted,
+	breakable=false,
 	minted style=colorful,
 	minted language=#2,
-	minted options={fontsize=\small,breaklines,breakafter=.+ ,autogobble,linenos,numbersep=3mm},
+	minted options={
+		fontsize=\small,
+		breaklines,
+		breakafter=.+ ,
+		autogobble,
+		linenos,
+		numbersep=3mm
+	},
 	colback=gray!5,colframe=gray!50!black,listing only,
 	left=5mm,enhanced,
 	title={#3},
