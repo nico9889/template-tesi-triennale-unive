@@ -52,6 +52,10 @@ footskip=.35in]{geometry}
 
 \RequirePackage{url}
 
+% Decommenta per ottenere una versione più print-friendly
+% Rimuove alcune sfumature dai codeblock e riduce l'intensità di alcuni colori per risparmiare inchiostro
+% N.B: non testata
+%\def\@printable{1}
 
 % tcolorbox settings
 \tcbuselibrary{minted}
@@ -63,6 +67,14 @@ footskip=.35in]{geometry}
 \newtcolorbox[auto counter,number within=section]{pabox}[2][]{%
 colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,
 title=Examp.~\thetcbcounter: #2,#1}
+
+\ifdefined\@printable
+\def\codeblockbg{white}
+\def\codeblockframe{gray!80!black}
+\else 
+\def\codeblockbg{gray!5}
+\def\codeblockframe{gray!50!black}
+\fi
 
 
 \newtcblisting{codeblock}[3][]{%
@@ -78,7 +90,9 @@ title=Examp.~\thetcbcounter: #2,#1}
 		linenos,
 		numbersep=3mm
 	},
-	colback=gray!5,colframe=gray!50!black,listing only,
+	colback=\codeblockbg,
+	colframe=\codeblockframe,
+	listing only,
 	left=5mm,enhanced,
 	title={#3},
 	overlay={
@@ -88,7 +102,6 @@ title=Examp.~\thetcbcounter: #2,#1}
 		\end{tcbclipinterior}
 		},#1
 }
-
 
 
 \hyphenation{a-gen-tiz-za-zio-ne}
