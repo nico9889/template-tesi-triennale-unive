@@ -57,6 +57,24 @@ footskip=.35in]{geometry}
 % N.B: non testata
 %\def\@printable{1}
 
+% Decommenta per ottenere una versione coi margini uguali per ogni pagina, più adatta per l'esportazione in solo PDF
+%\def\@pdf{1}
+
+\ifdefined\@printable
+\def\codeblockbg{white}
+\def\codeblockframe{gray!80!black}
+\else 
+\def\codeblockbg{gray!5}
+\def\codeblockframe{gray!50!black}
+\fi
+
+\ifdefined\@pdf
+\setlength{\oddsidemargin} {2. cm}
+\setlength{\evensidemargin} {2. cm}
+\addtolength{\oddsidemargin} {-0.4 cm}
+\addtolength{\evensidemargin} {-0.4 cm}
+\fi
+
 % tcolorbox settings
 \tcbuselibrary{minted}
 \tcbuselibrary{skins}
@@ -68,13 +86,7 @@ footskip=.35in]{geometry}
 colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,
 title=Examp.~\thetcbcounter: #2,#1}
 
-\ifdefined\@printable
-\def\codeblockbg{white}
-\def\codeblockframe{gray!80!black}
-\else 
-\def\codeblockbg{gray!5}
-\def\codeblockframe{gray!50!black}
-\fi
+
 
 
 \newtcblisting{codeblock}[3][]{%
@@ -107,11 +119,6 @@ title=Examp.~\thetcbcounter: #2,#1}
 \hyphenation{a-gen-tiz-za-zio-ne}
 \setlength{\paperwidth}{21. cm}
 \setlength{\paperheight}{29.7 cm}
-\setlength{\oddsidemargin} {2. cm}
-\setlength{\evensidemargin} {2. cm}
-\addtolength{\oddsidemargin} {-0.4 cm}
-\addtolength{\evensidemargin} {-0.4 cm}
-
 
 \newcommand*\Let[2]{\State #1 $\gets$ #2}
 \algrenewcommand\algorithmicrequire{\textbf{Input Data:}}
@@ -178,6 +185,7 @@ title=Examp.~\thetcbcounter: #2,#1}
 \newcommand\authorid[1]{\def\@authorid{#1}}
 
 \renewcommand{\maketitle}{
+	\thispagestyle{empty}
 	\begin{titlepage}
 		\newgeometry{left=1.31cm,right=2.96cm,top=1.27cm,bottom=0.49cm}
 	
@@ -226,4 +234,5 @@ title=Examp.~\thetcbcounter: #2,#1}
 		\@ay
 		\vspace{1cm}
 	\end{titlepage}
+	\cleardoublepage
 }
