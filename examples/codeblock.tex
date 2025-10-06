@@ -2,7 +2,7 @@
 
 Per creare blocchi di codice esteticamente molto fighi ma decisamente poco funzionali (copia-incollarli è tragico, provare per credere) puoi usare la macro definita nel .cls 
 
-\begin{codeblock}{cpp}{main.cpp}
+\begin{codeblock}[label=esempioReference]{cpp}{main.cpp}
 #include <iostream>
 use namespace std;
 
@@ -32,6 +32,9 @@ Nel caso il codice fosse talmente lungo da uscire dalla pagina è possibile usar
     \end{codeblocK} % Attenzione al typo! Falliva il parsing riutilizzando "codeblock" perché chiude il blocco anticipatamente
 \end{codeblock}
 
+
 e ottenere quindi il seguente (moderatamente orrendo, ma c'è poco da fare) effetto.
 
 Nella maggior parte dei casi questo aiuta LaTeX a impaginare in modo migliore il testo, in quanto gli è più facile spostare e incastrare i blocchi di codice dove prima non ci stavano, al costo però della leggibilità del codice.
+
+Puoi far riferimento ad un blocco di codice aggiungendo a questo una label e citandolo mediante \textbackslash{}ref (vedi \ref{esempioReference}).

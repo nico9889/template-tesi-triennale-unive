@@ -82,14 +82,7 @@ footskip=.35in]{geometry}
 
 
 % template per code block
-\newtcolorbox[auto counter,number within=section]{pabox}[2][]{%
-colback=red!5!white,colframe=red!75!black,fonttitle=\bfseries,
-title=Examp.~\thetcbcounter: #2,#1}
-
-
-
-
-\newtcblisting{codeblock}[3][]{%
+\newtcblisting[auto counter, number within=section]{codeblock}[3][]{%
 	listing engine=minted,
 	breakable=false,
 	minted style=colorful,
@@ -106,7 +99,7 @@ title=Examp.~\thetcbcounter: #2,#1}
 	colframe=\codeblockframe,
 	listing only,
 	left=5mm,enhanced,
-	title={#3},
+	title=\thetcbcounter: {#3},
 	overlay={
 		\begin{tcbclipinterior}
 			\fill[gray!5] (frame.south west)
@@ -114,6 +107,7 @@ title=Examp.~\thetcbcounter: #2,#1}
 		\end{tcbclipinterior}
 		},#1
 }
+
 
 
 \hyphenation{a-gen-tiz-za-zio-ne}
