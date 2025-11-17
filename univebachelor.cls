@@ -2,6 +2,9 @@
 \ProvidesClass{univebachelor}[2025/01/17 Ca' Foscari Bachelor thesis template]
 \LoadClass[12pt,a4paper,twoside,italian]{report}
 
+\RequirePackage[T1]{fontenc} % Required to improve rendering of accented characters, it avoids to split them in multiple subsequent glyphs
+\RequirePackage[utf8]{inputenc} % Required to enforce UTF-8 rendering
+\RequirePackage[italian]{babel}
 
 \RequirePackage[a4paper,top=0.9in,bottom=0.8in,
 footskip=.35in]{geometry}
@@ -14,7 +17,6 @@ footskip=.35in]{geometry}
 \RequirePackage{amsfonts}
 \RequirePackage{amssymb}
 
-\RequirePackage[italian]{babel}
 \RequirePackage{booktabs}
 
 \RequirePackage{comment}
