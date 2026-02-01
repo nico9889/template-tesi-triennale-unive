@@ -87,7 +87,8 @@ footskip=.35in]{geometry}
 \newtcblisting[auto counter, number within=section]{codeblock}[3][]{%
 	listing engine=minted,
 	breakable=false,
-	minted style=colorful,
+	% NON usare Colorful, causa un override di tcolorbox che aggiunge uno sfondo alle stringhe, impedendone lo split per andare a capo
+	minted style=emacs,
 	minted language=#2,
 	minted options={
 		fontsize=\small,
