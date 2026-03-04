@@ -182,6 +182,11 @@ footskip=.35in]{geometry}
 \newcommand\authorid[1]{\def\@authorid{#1}}
 
 \renewcommand{\maketitle}{
+	\hypersetup{
+		pdfauthor={\@author},
+		pdftitle={\@title},
+		pdfsubject={Tesi di Laurea}
+	}
 	\thispagestyle{empty}
 	\begin{titlepage}
 		\newgeometry{left=1.31cm,right=2.96cm,top=1.27cm,bottom=0.49cm}
