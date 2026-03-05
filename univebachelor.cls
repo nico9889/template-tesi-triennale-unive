@@ -72,10 +72,8 @@ footskip=.35in]{geometry}
 \fi
 
 \ifdefined\@pdf
-\setlength{\oddsidemargin} {2. cm}
-\setlength{\evensidemargin} {2. cm}
-\addtolength{\oddsidemargin} {-0.4 cm}
-\addtolength{\evensidemargin} {-0.4 cm}
+\setlength{\oddsidemargin} {1. cm}
+\setlength{\evensidemargin} {1. cm}
 \fi
 
 % tcolorbox settings
