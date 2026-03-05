@@ -44,6 +44,7 @@ footskip=.35in]{geometry}
 
 \RequirePackage[numbers]{natbib}
 
+\RequirePackage[a-1b,mathxmp]{pdfx}
 \RequirePackage{placeins}
 
 \RequirePackage{rotating}
